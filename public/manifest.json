@@ -14,5 +14,19 @@
   "action": {
     "default_popup": "popup.html",
     "default_title": "Demo Extension"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "iframe.html",
+        "iframe.js",
+        "iframe.css",
+        "assets/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
   }
 }

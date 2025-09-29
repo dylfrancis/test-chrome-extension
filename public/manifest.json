@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "React Extension Demo",
+  "version": "1.0.0",
+  "description": "Demo Chrome extension with popup that opens React iframe overlay",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Demo Extension"
+  }
+}
